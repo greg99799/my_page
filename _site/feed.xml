@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gregory Knudsen</title>
+    <description>My website to share a little bit about myself, show  you what I&#39;ve been building, and, most important,  tell you what I&#39;ve been learning.
+</description>
+    <link>http://www.gregknudsen.me/my_page/</link>
+    <atom:link href="http://www.gregknudsen.me/my_page/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sat, 05 Sep 2015 20:36:59 -0400</pubDate>
+    <lastBuildDate>Sat, 05 Sep 2015 20:36:59 -0400</lastBuildDate>
+    <generator>Jekyll v2.3.0</generator>
+    
+      <item>
+        <title>What I Learned This Week</title>
+        <description>&lt;p&gt;&lt;strong&gt;** TO BE ASKED EVERY WEEK **&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;I’m upset with myself for taking so long between posts. No excuses, but it has been for good reason. I’ve taken on an internship posisition with a local company here in Sarasota doing mainly front end work but also some Django development. It’s been a great learning experience for sure. I’ve actually been disappointed with my output, but the CEO of the company (who is also a coder of over 15 years) said I was doing a good job, so I’ll take that for what it’s worth. I want writing this blog to be a normal event, so I wanted to add another entry. I’ma actually at the office for the company, but it’s a good time to take a break and do this. Onto the post!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;What did you learn this week?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;knock down the house of cards
+    &lt;ul&gt;
+      &lt;li&gt;What I mean: One of the tasks I was assigned last week for my internship was to add cookies to a minor function of the website. It was to reassign the cookie when a display was clicked. There are only two possible displays, so the javascript file it is in uses true/false to determine the display. Of course, assigning cookies to this would mean the user could leave the page, come back and see the same display every time. To make a long story short (that I might make longer in a future post), even with the help of the CEO, it is not working. To reference the house of cards, when I started working on this assignment, I was very hesitant to alter the existing code. I thought I’d make what I had to do ‘fit’. I actually tried to recreate this effect (and succeeded) on my own machine with a completely different example using jQuery. So I tried to gingerly add some of those ideas to my assignment - not succeeding. When I showed my own code to the CEO, his first response was, “That makes a lot of sense to me. Why don’t you do that in our project?” My first response was, “Well, that’s not how your code is set up.” After thinking about that for a second, I realized how backwards it is. When trying something new, DON’T BE AFRAID TO BREAK THINGS!!! It’s actually one of the foundational ideas I learned at DBC - be a two year old…break things, fall down. The get up and start over. YOU WILL NOT DIE!! After all, this is why there is git. :)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;** HTML Question 
+selected at random in irb 
+&lt;code&gt;
+2.1.1 :001 &amp;gt; rand(13)
+ =&amp;gt; 1
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;ol&gt;
+    &lt;li&gt;What does a doctype do?&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;*** My answer&lt;/p&gt;
+
+&lt;p&gt;doctype tells the browser what type of document it is. I know that I have only ever seen this at the top of HTML pages, so I assume it’s main purpose is to announce an HTML page is about to be loaded.&lt;/p&gt;
+
+&lt;p&gt;** After research&lt;/p&gt;
+
+&lt;p&gt;I was partially correct, in that I missed a few important details. doctype (which means ‘Document Type Declaration’) is a declaration, not an html tag. If an html page does not have a doctype at the top, you cannot use an html validator. Having this declaration insures the browser will use (or at least make a best effort to use) the latest version of html.&lt;/p&gt;
+
+&lt;h5 id=&quot;resources&quot;&gt;Resources&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/7695044/what-does-doctype-html-do&quot;&gt;[link]&lt;/a&gt;
+I particularly like the seatbelt analogy - you won’t know something is wrong until you need it. :)&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;## Javascript Question
+&lt;code&gt;
+Math.floor((Math.random() * 48) + 1);
+// 41 
+&lt;/code&gt; 
+—&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;ol&gt;
+    &lt;li&gt;What language constructions do you use for iterating over object properties and array items?&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;my-answer&quot;&gt;My Answer&lt;/h3&gt;
+
+&lt;p&gt;Using a for loop. I believe there is a forEach method one could use.&lt;/p&gt;
+
+&lt;p&gt;** After research&lt;/p&gt;
+
+&lt;p&gt;I see now I only really addressed the array items portion of the question. I wasn’t too sure about the object properties. I found a great Stack Overflow thread on this. It seems that Object.keys(theObject) creates an array of all the prperties. &lt;em&gt;Actually this is only true if hasOwnProperty returns true&lt;/em&gt;
+I found, with the object (taken from the stack thread)&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Simon&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;20&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;clothing&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;simple&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;isCool&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;That the the ‘for…in’ worked well.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;property&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Simon&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;simple&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;isCool&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;resources-1&quot;&gt;Resources&lt;/h5&gt;
+&lt;p&gt;Here is the &lt;a href=&quot;http://stackoverflow.com/questions/8312459/iterate-through-object-properties&quot;&gt;link&lt;/a&gt; &lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 31 Aug 2015 16:30:43 -0400</pubDate>
+        <link>http://www.gregknudsen.me/my_page/2015/08/31/what-i-learned.html</link>
+        <guid isPermaLink="true">http://www.gregknudsen.me/my_page/2015/08/31/what-i-learned.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>What I Learned This Week</title>
+        <description>&lt;p&gt;&lt;strong&gt;** TO BE ASKED EVERY WEEK **&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;What did you learn this week?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;‘content: url()’ has MUCH less support than the ‘background’ property across browsers
+    &lt;ul&gt;
+      &lt;li&gt;WHY: This was an ongoing issue with &lt;a href=&quot;www.brunzies.com&quot;&gt;Brunzies&lt;/a&gt;’s index page - the image carousel. Uitmately, I found that using ‘content:url();’ was the solution. Then I realized that this did not work in Firefox. I did some research and found a (hacky) fix for that (used the :after pseudo class). As I started working for DataDreamers, I had to start working in a Windows 7 environment. When I checked IE11, the images didn’t appear there - even with the Firefox. I did some more research and found the ‘background: url();’ property, and that worked for IE. In doing this, I experimented a little more and found that I didn’t need the pseudo class fix for Firefox if I used the background property. And to continue this to its logical conclusion, using this worked across all platforms (even my dad’s Android cell phone which was not originally displaying the images). The only addition I needed to make was adding the ‘background-size: cover;’ property. Clearly, this is the better way. &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;technical interviews are nerve wracking
+    &lt;ul&gt;
+      &lt;li&gt;WHY: As someone who has taken professional orchestral auditions, I have an idea about this. Of course, this is not an orchestral audition - an event I had spent most of my career trying to master. A technical interview puts me right back at my first audition…scared shitless. It’s good, though. I just need to keep working and getting interviews, and I’ll get better. &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;I have a LONG way to go, but I’ll get there (this will be the last time this answer appears, as it will always be true)
+    &lt;ul&gt;
+      &lt;li&gt;WHY: In reference to above, I kind of got my ass kicked this week. This can’t be a hobby on the side if I want to make it my next career. Doing this project along with some others will help with this, but I would be lying if I said I wasn’t a little worried and frustrated.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;** General Question 
+selected at random in irb 
+&lt;code&gt;
+2.1.1 :002 &amp;gt; rand(19)
+ =&amp;gt; 12
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Name 3 ways to decrease page load (perceived or actual load time).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;*** My answer&lt;/p&gt;
+
+&lt;p&gt;minify assets, optimize images, use ajax to ‘preload’ content&lt;/p&gt;
+
+&lt;p&gt;** After research&lt;/p&gt;
+
+&lt;p&gt;I was actually pretty close on this. Where I would have gotten into trouble is if the interviewer had followed up on my third solution. I could not adequately describe &lt;em&gt;how&lt;/em&gt; to preload content. This is something I will look further into.&lt;/p&gt;
+
+&lt;h5 id=&quot;resources&quot;&gt;Resources&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.bizreport.com/2011/03/top-3-ways-to-decrease-page-load-times.html&quot;&gt;link&lt;/a&gt; (first hit on google - from 2011)
+ &amp;gt; * First, optimize, optimize, optimize. Check the types of images you are using on-site and ensure the file format is appropriate. 
+ &amp;gt; * Second, minimize HTTP requests. Rather than forcing your site to request multiple files for images, content or ads, combine some pages.
+ &amp;gt; * Finally, resize elements before they are uploaded into the HTML.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.raymondcamden.com/2015/04/10/front-end-interview-questions-part-5&quot;&gt;link&lt;/a&gt; 
+ &amp;gt; * Minimize images
+ &amp;gt; * Minimize and combine JavaScript files
+ &amp;gt; * Minimize, combine, and “prune” CSS files&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;## Coding Question
+&lt;code&gt;
+2.1.1 :004 &amp;gt; rand(8)
+ =&amp;gt; 1 
+&lt;/code&gt; 
+—
+&lt;code&gt;
+var foo = 10 + &#39;20&#39;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;What is the value of foo?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;my-answer&quot;&gt;My Answer&lt;/h3&gt;
+&lt;p&gt;initial answer would be undefined, as you can’t add a string to a number. Will brb after checking console…&lt;/p&gt;
+
+&lt;h3 id=&quot;correct-answer&quot;&gt;Correct answer&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;
+var foo = 10 + &#39;20&#39;;
+undefined
+foo;
+&quot;1020&quot;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Wrong! Damn it. Also, just ran it reverse and the result was ‘2010’. Now I remember…what could not be done is &lt;code&gt;var foo = 10 + &#39;bar&#39;&lt;/code&gt; 
+But I ran it, and…
+&lt;code&gt;
+var foo = 10 + &#39;bar&#39;;
+undefined
+foo;
+&quot;10bar&quot;
+&lt;/code&gt;
+Wrong again! Checking the console, that code is coerced into a string. Definitely need to remember this.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 13 Aug 2015 16:30:43 -0400</pubDate>
+        <link>http://www.gregknudsen.me/my_page/2015/08/13/what-i-learned.html</link>
+        <guid isPermaLink="true">http://www.gregknudsen.me/my_page/2015/08/13/what-i-learned.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
